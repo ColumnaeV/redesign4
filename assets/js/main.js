@@ -1,3 +1,8 @@
+// Lazy Loading //
+$(function() {
+    $('.lazy').lazy();
+});
+
 // Loading //
 document.onreadystatechange = function () {
     var state = document.readyState
@@ -74,41 +79,6 @@ $(document).ready(function (){
         $('html, body').stop(true, false).animate({
             scrollTop: $("#nav-down-here").offset().top
         }, 1200, 'easeInOutExpo');
-    });
-
-    // Tab Scroll CSS Control //
-    $(window).scroll(function(){
-        if($(window).scrollTop() < $("#section1").offset().top - 50 ){
-            $(".nav-wrapper").removeClass('nav-wrapper-add');
-            $('span').removeClass('span-change');
-            document.title = 'Christian Nguyen';
-        }else{
-            $(".nav-wrapper").addClass('nav-wrapper-add');
-        }
-        if($(window).scrollTop() >= $("#section1").offset().top - 50  && $(window).scrollTop() < $("#section2").offset().top - 50 ){
-            $("#tab1").css("border-bottom","2px solid #00b8e6");
-            document.title = 'Christian Nguyen | Developer';
-        }else{
-            $("#tab1").css("border-bottom","2px solid rgba(0,0,0,0)");
-        }
-        if($(window).scrollTop() >= $("#section2").offset().top - 50  && $(window).scrollTop() < $("#section3").offset().top - 50 ){
-            $("#tab2").css("border-bottom","2px solid #00b8e6");
-            document.title = 'Christian Nguyen | Projects';
-        }else{
-            $("#tab2").css("border-bottom","2px solid rgba(0,0,0,0)");
-        }
-        if($(window).scrollTop() >= $("#section3").offset().top - 50  && $(window).scrollTop() < $("#section4").offset().top - 50 ){
-            $("#tab3").css("border-bottom","2px solid #00b8e6");
-            document.title = 'Christian Nguyen | Business';
-        }else{
-            $("#tab3").css("border-bottom","2px solid rgba(0,0,0,0)");
-        }
-        if($(window).scrollTop() >= $("#section4").offset().top - 50 ){
-            $("#tab4").css("border-bottom","2px solid #00b8e6");
-            document.title = 'Christian Nguyen | Connect';
-        }else{
-            $("#tab4").css("border-bottom","2px solid rgba(0,0,0,0)");
-        }
     });
     
 });
