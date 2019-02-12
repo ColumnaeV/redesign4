@@ -82,10 +82,3 @@ $(document).ready(function (){
     });
     
 });
-
-window.addEventListener('scroll', () => {
-    let children = $('#parallax-container').children('.parallax-div');
-    for(let i = 0; i < children.length; i++) {
-      children[i].style.transform = 'translateY(-' + (window.pageYOffset * i / children.length) + 'px)';
-    }
-  }, false)
