@@ -266,7 +266,7 @@ body {
 }
   
 .parallax-div {
-    position: fixed;
+    position: absolute;
     top: 0;
     background-position: center !important;
     background-size: cover;
@@ -558,10 +558,11 @@ body {
 #parallax-container {
     display: block;
     height: auto;
+    position: relative;
 }
   
 .parallax-div {
-    position: fixed;
+    position: absolute;
     top: 0;
     background-position: center !important;
     background-size: cover;
@@ -571,7 +572,7 @@ body {
 }
 
 .cover-wrapper {
-    position: relative;
+    position: absolute !important;
     width: 100vw;
     height: auto;
     display: flex;
